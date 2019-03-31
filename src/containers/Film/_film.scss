@@ -1,0 +1,143 @@
+.film-container {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    h1 {
+        line-height: 200px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        margin-bottom: 35px;
+    }
+
+    .exit-btn {
+        background-color: black;
+        border: solid 3px #ffff00;
+        border-radius: 55%;
+        color: #ffff00;
+        cursor: pointer;
+        font-size: 200%;
+        margin: 20px;
+        outline: none;
+        padding: 5px 20px 10px 20px;
+        position: absolute;
+        text-decoration: none;
+        z-index: 2;
+    }
+
+    .gradient-container {
+        position: relative;
+        width: 100%;
+        min-height: 60vh;
+        top: -45px;
+        background-image: linear-gradient(0deg, transparent, black 75%);
+        z-index: 1;
+    }
+
+    .movie-info {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 800px;
+        color: #ffff00;
+        font-family: 'Pathway Gothic One', sans-serif;
+        font-size: 500%;
+        font-weight: 600;
+        letter-spacing: 6px;
+        line-height: 150%;
+        perspective: 600px;
+        text-align: center;
+    }
+
+    .crawl {
+        position: relative;
+        top: 99999px;
+        transform-origin: 50% 100%;
+        animation: crawl 40s linear;
+    }
+  }
+
+  @keyframes crawl {
+      0% {
+      top: -100px;
+      transform: rotateX(25deg)  translateZ(0);
+    }
+      100% {
+      top: -6000px;
+      transform: rotateX(25deg) translateZ(-2500px);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .film-container {
+//     bottom: 0;
+//     pointer-events:none;
+//     color: #ffff00;
+//     font-family: $mainFont;
+//     font-size: 55px;
+//     left: 0;
+//     letter-spacing: 4px;
+//     line-height: 110px;
+//     overflow: hidden;
+//     position: absolute;
+//     right: 0;
+//     text-align: center;
+//     width: 100%;
+//     height: 100%;
+//     top: -2600px;
+//     transform-origin: 50% 100%;
+//     transform: perspective(380px) rotateX(20deg);
+
+//     .gradient-container {
+//         background:linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,0) 100%);
+//         background:linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0) 100%);
+//         padding-top: 3500px;
+//         pointer-events:none;
+//         position: relative;
+//     }
+
+//     .movie-info {
+//         animation: autoscroll 700s linear;
+//     }
+
+//     .exit-btn {
+//         color: ffff00;
+//         position: absolute;
+//         top: 0px;
+//         // left: -100px;
+//         font-size: 1000px;
+//     }
+
+//     h1 {
+//         line-height: 140px;
+//         margin-bottom: 120px;
+//     }
+// }
+
+// @keyframes autoscroll {
+//     to {
+//         margin-top: -90000px;
+//     }
+// }
