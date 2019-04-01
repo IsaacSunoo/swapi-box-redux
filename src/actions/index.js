@@ -1,9 +1,9 @@
-export const addFavorite = id => ({
+export const addFavorite = name => ({
     type: 'ADD_FAVORITE',
-    id
+    name
 });
 
-export const removeFavorite = id => ({
+export const removeFavorite = name => ({
     type: 'REMOVE_FAVORITE',
-    id
+    name
 })

@@ -10,10 +10,6 @@ class InfoContainer extends Component {
                     <Link className='link-design' to='/vehicles'>Vehicles</Link>
                     <Link className='link-design' to='/planets'>Planets</Link>
                     <Link className='link-design' to='/favorites'>Favorites</Link>
-                    {/* <button type='submit' className='btn-design'>People</button>
-                    <button type='submit' className='btn-design'>Vehicles</button>
-                    <button type='submit' className='btn-design'>Planets</button>
-                    <button type='submit' className='btn-design'>Favorites</button> */}
                 </section>
             </div>
         )

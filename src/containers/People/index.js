@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import Header from '../../components/Header';
+import InfoContainer from '../../components/InfoContainer';
+import PeopleCard from './PeopleCard';
 
 class People extends Component {
     constructor() {
         super();
         this.state = {
-            characters: []
+            characters: [],
+            isLoading: true
         }
     }
 
@@ -13,7 +17,7 @@ class People extends Component {
         const response = await fetch(url);
         const charactersResponse = await response.json();
         const characters = await this.fetchCharData(charactersResponse.results);
-        this.setState({ characters });
+        this.setState({ characters, isLoading: false });
     }
 
     fetchCharData = (charactersArr) => {
@@ -33,11 +37,20 @@ class People extends Component {
     }
 
   render() {
-      const { characters } = this.state;
+      const { characters, isLoading } = this.state;
+
+      const displayPeople = characters.map(character => (
+          <PeopleCard key={character.name} {...character} />
+      ));
+
       console.log(characters);
     return (
-      <div>
-
+      <div className='people-container'>
+          <Header />
+          <InfoContainer />
+        {
+            isLoading ? (<div className='center-image'><img src='https://media2.giphy.com/media/cBQBqW7OJblba/source.gif' className='loading-screen' alt='loading pic'></img></div>) : (< div className='character-card-container' > {displayPeople}</div>)
+          }
       </div>
     )
   }

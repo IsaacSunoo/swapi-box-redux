@@ -1,0 +1,10 @@
+.vehicle-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+}
+
+.vehicle-card {
+    @include card-design(#0B03B8, 200px);
+}

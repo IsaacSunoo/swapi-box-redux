@@ -1,0 +1,16 @@
+.character-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+}
+
+.center-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.character-card {
+    @include card-design(#0B03B8, 150px);
+}
